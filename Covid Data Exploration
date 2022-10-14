@@ -13,7 +13,7 @@ AND continent is not null
  ORDER BY 1, 2
 
 
- -- Looking at Total Cases vs Population
+-- Looking at Total Cases vs Population
 -- Shows what percent of population got Covid
  
  SELECT location, date, population, total_cases, (total_cases/population)*100 as PercentPopulation
@@ -33,7 +33,6 @@ WHERE continent is not null
  ORDER BY PercentPopulationInfected desc
  
 
- 
 -- Showing the countries with the highest death count per population
  SELECT location, MAX(cast (total_deaths as int)) as TotalDeathCount
  FROM `sunny-cider-364523.PortfolioProject.CovidDeath`
@@ -133,16 +132,7 @@ WITH PopsvsVac AS
 SELECT *
 From PopsvsVac
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
 -- Creating a temp table w/ percent
 WITH PopsvsVac AS
  
